@@ -1,11 +1,12 @@
 #include <iostream>
 
-#include "opencv2/opencv.hpp"
+// #include "opencv2/opencv.hpp"
 
 int main()
 {
-    std::cout << "Hello, World!" << std::endl;
+    std::cout << "Hello, World & Travis!" << std::endl;
 
+    /*
     cv::VideoCapture cap(0); // open the default camera
     if(!cap.isOpened())  // check if we succeeded
         return -1;
@@ -18,6 +19,7 @@ int main()
         cv::imshow("Red Cam", frame);
         if(cv::waitKey(30) >= 0) break;
     }
+    */
 
     return 0;
 }
