@@ -12,7 +12,7 @@ services:
 
 before_install:
   - docker pull skarupa/cpp-env:plain
-  - docker run -id --name RedCam --mount type=bind,src=/home/travis/build/AdharaOrigin/workflow,dst=/app skarupa/cpp-env
+  - docker run -id --name RedCam --mount type=bind,src=/home/travis/build/AdharaOrigin/workflow,dst=/app skarupa/cpp-env:plain
   - docker ps
 
 # Build steps
