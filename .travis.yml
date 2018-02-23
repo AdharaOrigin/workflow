@@ -18,3 +18,4 @@ before_install:
 # Build steps
 script:
   - docker exec -it RedCam /bin/bash -c "cd /app && cmake . && make"
+  - docker exec -it RedCam /bin/bash -c "/app/bin/Workflow"

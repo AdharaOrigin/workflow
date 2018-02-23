@@ -2,9 +2,10 @@
 
 // #include "opencv2/opencv.hpp"
 
-int main()
+int main(int argc, char* argv[])
 {
     std::cout << "Hello, World & Travis!" << std::endl;
+    std::cout << argv[0] << std::endl;
 
     /*
     cv::VideoCapture cap(0); // open the default camera
