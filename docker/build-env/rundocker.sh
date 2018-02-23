@@ -1,1 +1,1 @@
-docker run -it --name RedCam --mount type=bind,src="$(pwd)"/../..,dst=/app redcam-build-env
+docker run -d --name RedCam --mount type=bind,src="$(pwd)"/../..,dst=/app redcam-build-env

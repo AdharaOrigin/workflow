@@ -1,3 +1,5 @@
+sudo: required
+
 # Enable C++ support
 language: cpp
 
@@ -5,8 +7,14 @@ language: cpp
 compiler:
   - gcc
 
+services:
+  - docker
+
+before_install:
+  - docker pull skarupa/cpp-env
+  - docker run -id --name RedCam --mount type=bind,src=/home/travis/build/AdharaOrigin/workflow,dst=/app skarupa/cpp-env
+  - docker ps
+
 # Build steps
 script:
-  - mkdir build
-  - cd build
-  - cmake .. && make
+  - docker exec -it RedCam /bin/bash -c "cd /app && cmake . && make"
